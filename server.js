@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors'); // Import the cors middleware
 
 const app = express();
-const port = 3000;
+//const port = 3000;
 
 const razorpay = new Razorpay({
     key_id: 'rzp_test_bA6BnBtSanhgXP',
@@ -44,7 +44,7 @@ app.post('/webhook', (req, res) => {
 
     res.status(200).send('Webhook received');
 });
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+const PORT = process.env.PORT || 3000; 
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
