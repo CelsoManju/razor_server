@@ -7,8 +7,8 @@ const app = express();
 //const port = 3000;
 
 const razorpay = new Razorpay({
-    key_id: 'rzp_test_bA6BnBtSanhgXP',
-    key_secret: 'RJYQMTN79JoC1NIbi4YhD6eg'
+    key_id: '',
+    key_secret: ''
 });
 
 app.use(cors()); // Use the cors middleware
